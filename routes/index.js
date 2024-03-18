@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 /* GET home page. */
-router.get("/", function (req, res) {
+router.post("/", function (req, res) {
   const { data } = req.body;
   if(!data) return res.json({msg: "Send data please and select me and improve hiring process"});
   
