@@ -4,7 +4,8 @@ const router = express.Router();
 /* GET home page. */
 router.get("/", function (req, res) {
   const { data } = req.body;
-
+  if(!data) return res.json({msg: "Send data please and select me"});
+  
   const capital_alphabets_array = data
     .map((x) => x.toUpperCase())
     .filter((x) => x != parseInt(x));
