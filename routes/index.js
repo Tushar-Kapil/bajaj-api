@@ -10,21 +10,25 @@ router.post("/", function (req, res) {
     .map((x) => x.toUpperCase())
     .filter((x) => x != parseInt(x));
 
-  const odd_numers_array = data
+  const odd_numbers_array = data
     .map((x) => parseInt(x))
     .filter((x) => x % 2 !== 0)
     .filter((x) => x == parseInt(x));
-
+  
+  console.log(odd_numbers_array);
+  
   const even_numbers_array = data
     .map((x) => parseInt(x))
     .filter((x) => x % 2 === 0);
 
+  console.log(even_numbers_array);
+  
   const result = {
     is_success: true,
     user_id: "tushar_kapil_2110991462",
     email: "tushar1462.be21@chitkara.edu.in",
     roll_number: "2110991462",
-    odd_numers_array,
+    odd_numbers_array,
     even_numbers_array,
     capital_alphabets_array,
   };
