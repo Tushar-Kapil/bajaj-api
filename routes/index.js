@@ -7,7 +7,7 @@ router.post("/", function (req, res) {
   if(!data) return res.json({msg: "Send data please and select me and improve hiring process"});
   
   const capital_alphabets_array = data
-    .map((x) => x.toUpperCase())
+    .map((x) => x.match(/[a-z]/i) && x.toUpperCase())
     .filter((x) => x != parseInt(x));
 
   const odd_numbers_array = data
