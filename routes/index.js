@@ -3,8 +3,7 @@ const router = express.Router();
 
 /* GET home page. */
 router.get("/", function (req, res) {
-  // const { data } = req.body;
-  const data = ["A", "ABcD", "DOE"];
+  const { data } = req.body;
 
   const capital_alphabets_array = data
     .map((x) => x.toUpperCase())
