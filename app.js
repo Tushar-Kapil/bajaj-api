@@ -16,7 +16,7 @@ app.use(cors());
 
 app.use("/", indexRouter);
 
-const PORT = 5003;
+const PORT = 5005;
 
 const listener = app.listen(PORT, "0.0.0.0", () => {
   console.info(`API gateway listening on port ${listener.address().port}`);
